@@ -1,0 +1,23 @@
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--spacing-3) var(--spacing-3);
+  border: 1px var(--current-line) solid;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--foreground);
+  background-color: var(--background-dark);
+
+  &::placeholder {
+    color: var(--foreground);
+    font-size: 1rem;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    &::placeholder {
+      opacity: 0.3;
+    }
+  }
+}

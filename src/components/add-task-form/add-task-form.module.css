@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+}
+
+.inputContainer {
+  flex: 1 0 0;
+}
+
+.buttonIcon:global(.symbol) {
+  font-size: 1.5rem;
+}

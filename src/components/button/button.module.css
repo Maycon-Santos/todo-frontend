@@ -1,0 +1,36 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--spacing-3) var(--spacing-3);
+  border: 1px var(--current-line) solid;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--background);
+  background-color: var(--foreground);
+  transition: all 150ms linear;
+
+  &:hover {
+    cursor: pointer;
+    filter: contrast(200%);
+  }
+
+  &:disabled {
+    filter: grayscale(0.7);
+    cursor: initial;
+  }
+}
+
+.color-primary {
+  color: var(--foreground);
+  background-color: var(--blue);
+}
+
+.color-error {
+  color: var(--foreground);
+  background-color: var(--red);
+}

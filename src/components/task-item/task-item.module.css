@@ -1,0 +1,95 @@
+.wrapper {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--spacing-1);
+  border: 1px solid var(--current-line);
+  border-radius: 5px;
+  color: inherit;
+  background-color: var(--background-dark);
+
+  &:focus {
+    border: 1px solid var(--foreground);
+    outline: none;
+  }
+
+  &:hover,
+  &.isOpen {
+    filter: brightness(110%);
+  }
+}
+
+.isDone {
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.isOpen {
+  &,
+  &:focus {
+    border: 1px solid var(--foreground);
+    outline: 1px var(--foreground) solid;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.checkBoxWrapper,
+.deleteIconWrapper,
+.title,
+.shortDescription,
+.description {
+  padding: var(--spacing-1);
+}
+
+.title,
+.description,
+.shortDescription {
+  &:not(:focus) {
+    cursor: pointer;
+  }
+}
+
+.title {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.shortDescription {
+  opacity: 0.5;
+}
+
+.description {
+  line-height: 1.4rem;
+}
+
+.checkList {
+  padding: var(--spacing-1);
+  margin-top: var(--spacing-1);
+}
+
+.deleteButton {
+  background: none;
+  padding: 0;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    i.deleteIcon {
+      opacity: 0.9;
+    }
+  }
+}
+
+i.deleteIcon {
+  font-size: 1.8rem;
+  opacity: 0.5;
+}

@@ -1,0 +1,35 @@
+.taskItem {
+  & + .taskItem {
+    margin-top: var(--spacing-3);
+  }
+}
+
+.infoList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.infoValue {
+  border-radius: 30px;
+  padding: var(--spacing-0) var(--spacing-2);
+  margin-left: var(--spacing-2);
+  background-color: var(--current-line);
+}
+
+.createdTasks {
+}
+
+.completedTasks {
+  color: var(--blue);
+}
+
+.taskList {
+  margin-top: var(--spacing-3);
+}

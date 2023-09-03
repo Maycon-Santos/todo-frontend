@@ -1,0 +1,39 @@
+.input {
+  display: none;
+
+  &:checked + .checkbox {
+    opacity: 1;
+    border-color: var(--green);
+    background-color: var(--green);
+
+    i.checkIcon {
+      display: block;
+    }
+  }
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 3px var(--orange) solid;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: border 100ms linear;
+
+  &:hover,
+  &:focus {
+    border-color: var(--green);
+    outline: 3px var(--foreground) solid;
+  }
+}
+
+i.checkIcon {
+  display: none;
+  color: var(--background-dark);
+  font-size: 1.5rem;
+  user-select: none;
+}
