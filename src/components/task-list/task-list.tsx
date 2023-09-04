@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import TaskItem from '../task-item/task-item'
 import { useApi } from '../api-provider/api-provider'
 import Loader from '../loader/loader'
@@ -8,7 +8,16 @@ import styles from './task-list.module.css'
 
 const TaskList: React.FC = () => {
   const [taskItemOpenedId, setTaskItemOpenedId] = useState<string>()
-  const { taskList, loading, deleteTask, editTask } = useApi()
+  const [loading, setLoading] = useState<boolean>(false)
+  const { taskList, fetchTaskList, deleteTask, editTask } = useApi()
+
+  useEffect(() => {
+    ;(async () => {
+      setLoading(true)
+      await fetchTaskList()
+      setLoading(false)
+    })()
+  }, [])
 
   if (loading && !taskList) {
     return <Loader />

@@ -15,6 +15,7 @@
     "classnames": "^2.3.2",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
+    "js-cookie": "^3.0.5",
     "material-symbols": "^0.11.0",
     "next": "13.4.19",
     "react": "18.2.0",
@@ -23,6 +24,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.3",
     "@types/uuid": "^9.0.3",
     "postcss-nested": "^6.0.1",
     "prettier": "^3.0.3"

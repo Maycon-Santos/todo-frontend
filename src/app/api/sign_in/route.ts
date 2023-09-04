@@ -3,11 +3,8 @@ import { NextResponse } from 'next/server'
 export async function POST(request: Request) {
   const requestBody = await request.json()
 
-  const response = await fetch(`${process.env.API_BASE_URL}/edit`, {
+  const response = await fetch(`${process.env.API_BASE_URL}/sign_in`, {
     method: 'POST',
-    headers: {
-      Token: request.headers.get('Token') || '',
-    },
     body: JSON.stringify(requestBody),
   })
 

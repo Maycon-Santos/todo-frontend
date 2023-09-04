@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie'
 import { Task } from '@/types'
 
 export default async function EditTask(task: Task) {
@@ -5,6 +6,7 @@ export default async function EditTask(task: Task) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      Token: Cookies.get('token') || '',
     },
     body: JSON.stringify(task),
   })

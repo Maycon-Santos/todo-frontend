@@ -112,7 +112,10 @@ const TaskItem: React.FC<TaskItemProps> = (props) => {
             disabled={!isOpen}
             placeholder="Sem título"
             onChange={(e) => {
-              const value = e.currentTarget.value
+              const value = e.currentTarget.value.replaceAll(
+                /(?:\r\n|\r|\n)/g,
+                '',
+              )
 
               if (onEdit) onEdit('title', value)
             }}

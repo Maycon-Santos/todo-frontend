@@ -1,9 +1,9 @@
 import { redirect } from 'next/navigation'
 import Header from '@/components/header/header'
 import Spacing from '@/components/spacing/spacing'
-import LoginForm from '@/components/login-form/login-form'
 import Container from '@/components/container/container'
 import ApiProvider from '@/components/api-provider/api-provider'
+import RegisterForm from '@/components/register-form/register-form'
 import IsAuthenticated from '@/services/is-authenticated'
 
 export default async function Home() {
@@ -18,7 +18,7 @@ export default async function Home() {
       <Header />
       <Spacing vertical={8} />
       <Container component="main">
-        <LoginForm />
+        <RegisterForm />
       </Container>
     </ApiProvider>
   )

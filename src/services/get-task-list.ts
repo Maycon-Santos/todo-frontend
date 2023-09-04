@@ -1,9 +1,14 @@
+import Cookies from 'js-cookie'
+
 export default async function GetTaskList() {
   const response = await fetch('/api/list', {
     headers: {
       'Content-Type': 'application/json',
+      Token: Cookies.get('token') || '',
     },
   })
 
-  return await response.json()
+  const { data } = await response.json()
+
+  return data.results
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import { useApi } from '../api-provider/api-provider'
 import Button from '../button/button'
